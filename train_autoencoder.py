@@ -41,3 +41,5 @@ if __name__ == "__main__":
     #error = model.r2().as_data_frame(use_pandas=True) #Bug in this now. Does not work
     #We perform the inference step to get our reconstruction error
     error = model.anomaly(test_data=h2o_df).as_data_frame(use_pandas=True)
+    
+    h2o.shutdown()
